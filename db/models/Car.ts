@@ -13,7 +13,7 @@ import {
 })
 export class Car extends Model {
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
