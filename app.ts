@@ -90,6 +90,8 @@ const start = async (): Promise<void> => {
   }
 };
 
+// ini startnya
+
 void start();
 
 export default app;
