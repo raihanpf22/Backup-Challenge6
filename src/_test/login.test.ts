@@ -1,4 +1,4 @@
-import app from "../../app";
+import app from "../../server";
 import request from "supertest";
 
 describe("POST / - Login Module", () => {

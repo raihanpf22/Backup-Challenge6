@@ -2,11 +2,19 @@
   "name": "api-binarcarts",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "index.js",
+  "types": "build/server.d.ts",
+  "files": [
+    "build",
+    "package.json",
+    "package-lock.json",
+    "README.md"
+  ],
   "scripts": {
-    "dev": "nodemon app.ts",
+    "tsc": "tsc",
+    "dev": "nodemon server.ts",
     "build": "npx tsc",
-    "start": "node build/app.js",
+    "start": "node build/server.js",
     "test": "jest"
   },
   "jest": {

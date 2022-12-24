@@ -23,7 +23,7 @@ import {
 } from "./src/middlewares/authMiddleware";
 import { multerUpload } from "./src/utils/multer";
 import swaggerUI from "swagger-ui-express";
-import * as swaggerDocument from "./src/swagger.json";
+import * as swaggerDocument from "./swagger.json";
 import * as dotenv from "dotenv";
 import cors from "cors";
 
