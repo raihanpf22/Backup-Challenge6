@@ -1,5 +1,5 @@
 import userRepository from "../repositories/userRepository";
-import { IUser } from '../interface/IUser';
+import { IUser } from "../interface/IUser";
 
 class userService {
   static async list() {
@@ -47,6 +47,32 @@ class userService {
           status_code: 201,
           message: "Success OK!",
           data: createUser,
+        };
+      }
+    } catch (error: any) {
+      return {
+        status_code: 400,
+        message: error.message,
+        data: "Null",
+      };
+    }
+  }
+
+  static async delete({ id }:any) {
+    try {
+      const deleteUser = await userRepository.deletedByID({ id });
+
+      if (!deleteUser) {
+        return {
+          status_code: 400,
+          message: "Can't delete data !",
+          data: "Null",
+        };
+      } else {
+        return {
+          status_code: 200,
+          message: "Success OK!",
+          data: "Has Been Deleted",
         };
       }
     } catch (error: any) {

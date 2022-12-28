@@ -18,4 +18,16 @@ export const userList = async (
   });
 };
 
+export const userDelete = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
+  const { id } = req.params;
+  const Result: IResponse = await userService.delete({id});
 
+  return res.status(Result.status_code).send({
+    status_code: Result.status_code,
+    message: Result.message,
+    data: Result.data,
+  });
+};

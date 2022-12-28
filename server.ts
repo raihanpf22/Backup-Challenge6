@@ -14,7 +14,7 @@ import {
   carDelete,
   carAvailable,
 } from "./src/controllers/carController";
-import { userList } from "./src/controllers/userController";
+import { userList, userDelete } from "./src/controllers/userController";
 import {
   authenticate,
   isSuperAdmin,
@@ -68,6 +68,9 @@ app.post(
 // Update data car
 app.put("/cars/edit/:id", authenticate, isNotMember, carUpdate);
 
+// Delete user
+app.delete("/user/delete/:id", authenticate, isSuperAdmin, userDelete);
+
 // Delete data car
 app.delete("/cars/delete/:id", authenticate, isNotMember, carDelete);
 
@@ -78,21 +81,10 @@ app.get("/current_user", authenticate, currentUser);
 app.get("/car_available", authenticate, carAvailable);
 
 // Server setup
-const start = async (): Promise<void> => {
-  try {
-    await connection.sync();
-    app.listen(port, () => {
+    connection.sync();
+    export const server = app.listen(port, () => {
       console.log(`Server started on http://localhost:${port}/`);
-    });
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-};
+    })
 
-// ini startnya
-// buat commit doang
-
-void start();
 
 export default app;

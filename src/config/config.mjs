@@ -9,7 +9,7 @@ const config = {
     database: process.env.PGNAME,
     host: process.env.PGHOST,
     dialect: process.env.PGDIALECT,
-    port: process.env.PGPORT,
+    
   },
   test: {
     username: process.env.PGUSERNAME,
@@ -17,7 +17,7 @@ const config = {
     database: process.env.PGNAME,
     host: process.env.PGHOST,
     dialect: process.env.PGDIALECT,
-    port: process.env.PGPORT,
+    
   },
   production: {
     username: process.env.PGUSERNAME,
@@ -25,7 +25,7 @@ const config = {
     database: process.env.PGNAME,
     host: process.env.PGHOST,
     dialect: process.env.PGDIALECT,
-    port: process.env.PGPORT,
+    
   },
 };
 

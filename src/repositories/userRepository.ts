@@ -24,6 +24,12 @@ class userRepository {
 
     return getUser;
   }
+
+  static async deletedByID({ id }:any) {
+    const deleteUser = await User.destroy({ where: { id } });
+
+    return deleteUser;
+  }
 }
 
 export default userRepository;

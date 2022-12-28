@@ -1,9 +1,9 @@
 export type IUser = {
     id?:number;
     name?:string;
-    email:string;
+    email?:string;
     role?:string
-    password:string;
+    password?:string;
     createdAt?:Date;
     updatedAt?:Date
 }
