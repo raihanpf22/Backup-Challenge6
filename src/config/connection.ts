@@ -6,20 +6,23 @@ const bcrypt = require("bcrypt");
 
 dotenv.config();
 
-// const connection = new Sequelize(process.env.PGLINK as string, {
-//   models: [User, Car],
-// });
-
-const connection = new Sequelize({
-  dialect: "postgres",
-  host: "localhost",
-  username: "postgres",
-  password: "Gadjahmada123*",
-  database: "binar-challenge6",
+const connection = new Sequelize(process.env.PGLINK as string, {
   models: [User, Car],
-
-  logging: false,
 });
+
+
+// For Development conection
+
+// const connection = new Sequelize({
+//   dialect: "postgres",
+//   host: "localhost",
+//   username: "postgres",
+//   password: "Gadjahmada123*",
+//   database: "binar-challenge6",
+//   models: [User, Car],
+
+//   logging: false,
+// });
 
 // Seeder For User
 const salt = bcrypt.genSaltSync(10);
