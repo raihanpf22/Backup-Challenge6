@@ -86,19 +86,5 @@ app.get("/car_available", authenticate, carAvailable);
       console.log(`Server started on http://localhost:${port}/`);
     })
 
-    const start = async (): Promise<void> => {
-      try {
-        await connection.sync();
-        app.listen(port, () => {
-          console.log(`Server started on http://localhost:${port}/`);
-        });
-      } catch (error) {
-        console.log(error);
-        process.exit(1);
-      }
-    };
-
-    void start();
-
 
 export default app;
