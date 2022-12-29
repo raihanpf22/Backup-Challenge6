@@ -8,6 +8,7 @@ const config = {
     password: process.env.PGPASSWORD,
     database: process.env.PGNAME,
     host: process.env.PGHOST,
+    port: process.env.PGPORT,
     dialect: process.env.PGDIALECT,
     
   },
@@ -16,6 +17,7 @@ const config = {
     password: process.env.PGPASSWORD,
     database: process.env.PGNAME,
     host: process.env.PGHOST,
+    port: process.env.PGPORT,
     dialect: process.env.PGDIALECT,
     
   },
@@ -24,6 +26,7 @@ const config = {
     password: process.env.PGPASSWORD,
     database: process.env.PGNAME,
     host: process.env.PGHOST,
+    port: process.env.PGPORT,
     dialect: process.env.PGDIALECT,
     
   },
