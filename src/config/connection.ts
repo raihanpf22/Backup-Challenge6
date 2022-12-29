@@ -18,7 +18,7 @@ const connection = new Sequelize({
   database: "binar-challenge6",
   models: [User, Car],
 
-  // logging: false,
+  logging: false,
 });
 
 // Seeder For User

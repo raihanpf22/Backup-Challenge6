@@ -26,13 +26,11 @@
     ],
     "verbose": true,
     "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "tsconfig.json"
-      }
+      "^.+\\.(ts|tsx)$": [
+        "ts-jest"
+      ]
     }
+    
   },
   "author": "",
   "license": "ISC",
