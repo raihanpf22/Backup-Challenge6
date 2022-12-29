@@ -43,7 +43,7 @@ const car = new Car({
   no_police: "B 4022 KZB",
   brand: "SUZUKI",
   model: "LMPV",
-  image:"http://res.cloudinary.com/dgswqbhcm/image/upload/v1672200109/fdqfv4cggfkmhdsimigu.jpg",
+  image:"http://res.cloudinary.com/dgswqbhcm/image/upload/v1672200109/fdqfv4cggfkmhdsimigu.jpg" as string,
   price_perday:1500000,
   capacity:7,
   status:true,
